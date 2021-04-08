@@ -6,16 +6,17 @@ import './Button.css';
 //     background: ${({ primary }) => (primary ? '#000d1a' : 'CD853F')}
 // `
 
-const STYLES = ['btn--primary', 'btn--outline']
+const STYLES = ['btn--primary', 'btn--outline', 'btn--purple']
 
-const SIZES = ['btn--medium', 'btn--large']
+const SIZES = ['btn--medium', 'btn--large', 'btn--purple--medium']
 
 export const Button = ({
     children,
     type,
     onClick,
     buttonStyle,
-    buttonSize
+    buttonSize,
+    link
   }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
       ? buttonStyle
@@ -24,7 +25,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
   
     return (
-      <Link to='/sign-up' className='btn-mobile'>
+      <Link to={link} className='btn-mobile'>
         <button
           className={`btn ${checkButtonStyle} ${checkButtonSize}`}
           onClick={onClick}

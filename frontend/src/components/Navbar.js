@@ -83,6 +83,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { Link as linkScroll } from "react-scroll";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -123,11 +124,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/whoarewe'
+                to='/aboutus'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Who Are We
+                About Us
               </Link>
             </li>
             <li className='nav-item'>
@@ -150,7 +151,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
+          {button && <Button buttonStyle='btn--outline' link='/signin'>SIGN IN</Button>}
         </div>
       </nav>
     </>
