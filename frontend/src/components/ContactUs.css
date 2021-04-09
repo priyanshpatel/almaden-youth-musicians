@@ -1,0 +1,21 @@
+.main-grid {
+    padding-top: 20px;
+}
+
+.form-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rebeccapurple;
+    color: #fff;
+    border: 1px solid var(--primary);
+  }
+  

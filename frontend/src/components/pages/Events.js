@@ -7,7 +7,7 @@ import InfoSection from '../InfoSection';
 import {homeObjOne} from './Data';
 import Events from '../Events';
 
-function Aboutus() {
+function Event() {
     return (
         <div id="events">
             <Events/>
@@ -15,4 +15,4 @@ function Aboutus() {
     )
 }
 
-export default Aboutus
+export default Event
