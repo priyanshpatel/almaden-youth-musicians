@@ -45,7 +45,7 @@ function InfoSection({
             <div
                 className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
             >
-                <div className='container'>
+                <div className='container container--info'>
                     <div
                         className='row home__hero-row'
                         style={{
@@ -78,7 +78,7 @@ function InfoSection({
                         </div>
                         <div className='col'>
                             <div className='home__hero-img-wrapper'>
-                                <img src={img} alt={alt} className='home__hero-img' />
+                                <img src={img} alt={alt} className='home__hero-img img-info' />
                             </div>
                         </div>
                     </div>

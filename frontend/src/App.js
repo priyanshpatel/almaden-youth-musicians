@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home'
 import Aboutus from './components/pages/Aboutus'
+import ImgGallery from './components/pages/ImgGallery'
+import Events from './components/pages/Events';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Switch>
           <Route path="/" exact component = {Home} />
           <Route path="/aboutus" component = {Aboutus} />
+          <Route path="/gallery" component = {ImgGallery}/>
+          <Route path="/events" component = {Events}/>
         </Switch>
       </div>
     </BrowserRouter>
