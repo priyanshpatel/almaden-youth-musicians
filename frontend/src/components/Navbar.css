@@ -53,6 +53,11 @@
   .nav-item {
     height: 80px;
   }
+
+  .nav-item-google {
+    height: 80px;
+    width: 120px;
+  }
   
   .nav-links {
     color: #fff;

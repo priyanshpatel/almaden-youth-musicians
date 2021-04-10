@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css'
 import './Gallery.css'
-import {images} from './data/ImageData'
+import { images } from './data/ImageData'
 import { SRLWrapper } from 'simple-react-lightbox';
 
 function Gallery() {
@@ -15,7 +15,7 @@ function Gallery() {
 	// 	[tag]
 	// );
 
-    useEffect(
+	useEffect(
 		() => {
 			setFilteredImages(images);
 		},
@@ -27,6 +27,7 @@ function Gallery() {
 			{/* <div className='container gallery-container'> */}
 			<div className='container gallery--header'>
 				<h1>Photo Gallery</h1>
+				<h3>Click on one of the images to start lightbox effect</h3>
 			</div>
 			{/* <div className="tags">
 				<TagButton name="all" tagActive={tag === 'all' ? true : false} handleSetTag={setTag} /> /

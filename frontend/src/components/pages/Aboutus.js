@@ -5,6 +5,7 @@ import '../../App.css'
 import { Link } from 'react-router-dom';
 import InfoSection from '../InfoSection';
 import {homeObjOne} from './Data';
+import Footer from '../Footer';
 
 function Aboutus({
     lightBg, topline, lightText, lightTextDesc, headline, decription, buttonLabel, img, alt, imgStart
@@ -12,6 +13,7 @@ function Aboutus({
     return (
         <div id="aboutus">
             <InfoSection {...homeObjOne}/>
+            <Footer />
         </div>
     )
 }

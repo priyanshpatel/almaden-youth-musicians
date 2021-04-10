@@ -8,6 +8,8 @@ import './ContactUs.css';
 import { withStyles } from '@material-ui/core/styles';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Alert, AlertTitle } from '@material-ui/lab';
+import axios from 'axios';
+import {api_url} from '../config';
 // import { Button } from './Button';
 
 
@@ -23,7 +25,8 @@ class ContactUs extends Component {
             schoolGrade: '',
             teachersNameEmail: '',
             msg: '',
-            updateFlag: false
+            updateFlag: false,
+            errorFlag: false
         };
         this.changeHandler = this.changeHandler.bind(this);
         this.submitUpdate = this.submitUpdate.bind(this);
@@ -37,10 +40,7 @@ class ContactUs extends Component {
     }
     submitUpdate = (e) => {
         e.preventDefault();
-        this.setState({
-            msg: 'Submitted Successfully',
-            updateFlag: true
-        })
+        
         console.log("onsubmit", e)
         const data = {
             firstName: this.state.firstName,
@@ -52,11 +52,32 @@ class ContactUs extends Component {
             teachersNameEmail: this.state.teachersNameEmail,
         };
         console.log(data);
+
+        axios.defaults.withCredentials = true;
+        // axios.post('http://localhost:3001/contactus', data).then(response => {
+        axios.post(api_url+'/contactus', data).then(response => {
+            if (response.status === 200) {
+                // Success
+                this.setState({
+                    msg: 'Submitted Successfully',
+                    updateFlag: true,
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    instrument: '',
+                    momsNameTelEmail: '',
+                    schoolGrade: '',
+                    teachersNameEmail: '',
+                })
+            } else {
+                // Failed
+                this.setState({
+                    msg: 'Error while submitting',
+                    errorFlag: false,
+                })
+            }
+        })
     }
-    // validate = (e) => {
-    //     let temp = {}
-    //     temp.firstName = this.state.firstName?"":"This field is required"
-    // }
 
     render() {
         const SubmitButton = withStyles({
@@ -202,6 +223,7 @@ class ContactUs extends Component {
                             <Grid item xs={6} md={12}>
                                 {/* {this.state.updateFlag ? <div class="alert alert-success" role="alert">{this.state.msg}</div> : null} */}
                                 {this.state.updateFlag ? <Alert severity="success"><AlertTitle>Success</AlertTitle>{this.state.msg}</Alert> : null}
+                                {this.state.errorFlag ? <Alert severity="error"><AlertTitle>Error</AlertTitle>{this.state.msg}</Alert> : null}
                             </Grid>
                             <Grid item xs={6} md={12}>
                                 <SubmitButton type="submit">Submit</SubmitButton>
