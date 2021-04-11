@@ -9,7 +9,7 @@ var cookieParser = require("cookie-parser");
 var cors = require('cors');
 const config = require('./config/config')
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Session Management
 app.use(bodyParser.json());
