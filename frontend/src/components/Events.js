@@ -1,40 +1,3 @@
-// import React, { Component } from "react";
-// import Slider from "react-slick";
-// import ReactPlayer from 'react-player'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// export default class Events extends Component {
-//   render() {
-//     const settings = {
-//       dots: true,
-//       infinite: true,
-//       speed: 500,
-//       slidesToShow: 1,
-//       slidesToScroll: 1
-//     };
-//     return (
-//       <div>
-//         <h2> Single Item</h2>
-//         <Slider {...settings}>
-//           <div>
-//             {/* <h3>1</h3> */}
-//             <ReactPlayer url='https://www.youtube.com/watch?v=eRXU1n_S7RI' />
-//           </div>
-//           <div>
-//             {/* <h3>2</h3> */}
-//             <ReactPlayer url='https://www.youtube.com/watch?v=_Yzhougjyfw' />
-//           </div>
-//           <div>
-//             {/* <h3>3</h3> */}
-//             <ReactPlayer url='https://www.youtube.com/watch?v=EIsfmtmYD0I' />
-//           </div>
-//         </Slider>
-//       </div>
-//     );
-//   }
-// }
-
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import './Events.css';
@@ -114,7 +77,7 @@ function App() {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "transparent"}}
+        style={{ ...style, display: "block", background: "transparent" }}
         onClick={onClick}
       />
     );
@@ -166,21 +129,11 @@ function App() {
           asNavFor={nav2}
           ref={slider => (setSlider1(slider))}
         >
-
-          {/* <div>
-      {isLoggedIn
-        ? <LogoutButton onClick={this.handleLogoutClick} />
-        : <LoginButton onClick={this.handleLoginClick} />
-      }
-    </div> */}
-
-
-
           {slidesData.map((slide) =>
             <div className="event--container">
               <div className="slick-slide" key={slide.id}>
                 {/* <h2 className="slick-slide-title">{slide.title}</h2> */}
-                <h2 className = "event-header-dynamic">{slide.title}</h2>
+                <h2 className="event-header-dynamic">{slide.title}</h2>
                 <img className="slick-slide-image event-img" src={`/images/events/IMG_${slide.id}.jpg`} />
                 {/* {slide.type == "video"
                   ? <ReactPlayer url={slide.link} />
@@ -203,17 +156,9 @@ function App() {
 
               <div className="slick-slide" key={slide.id}>
                 <img className="slick-slide-image" src={`/images/events/IMG_${slide.id}.jpg`} />
-                {/* {slide.type == "video"
-                  ? <ReactPlayer url={slide.link} />
-                  : <img className="slick-slide-image" src={`/images/events/IMG_${slide.id}.jpg`} />
-                } */}
               </div>
 
             )}
-            {/* <img className="slick-slide-image" src={`/images/events/IMG_1.jpeg`} />
-            <img className="slick-slide-image" src={`/images/events/IMG_2.jpeg`} />
-            <img className="slick-slide-image" src={`/images/events/IMG_3.jpeg`} />
-            <img className="slick-slide-image" src={`/images/events/IMG_4.jpeg`} /> */}
 
           </Slider>
         </div>

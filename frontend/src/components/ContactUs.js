@@ -88,16 +88,6 @@ class ContactUs extends Component {
                 color: 'white',
                 height: 48,
                 padding: '0 30px',
-                // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-
-                //   padding: '8px 20px',
-                // borderRadius: '2px',
-                //  outline: 'none',
-                // border: 'none',
-                // cursor: 'pointer',
-                // backgroundColor: 'rebeccapurple',
-                // color: '#fff',
-                // border: '1px solid #fff',
                 '&:hover': {
                     transition: 'all 0.3s ease-out',
                     backgroundColor: 'rgb(115, 87, 143)',
@@ -231,11 +221,6 @@ class ContactUs extends Component {
                         </Grid>
                         
                     </ValidatorForm>
-                    {/* <FormControl>
-                        <InputLabel htmlFor="my-input">Email address</InputLabel>
-                        <Input id="my-input" aria-describedby="my-helper-text" />
-                        <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-                    </FormControl> */}
                 </Container>
             </div>
         )

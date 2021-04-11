@@ -8,13 +8,6 @@ function Gallery() {
 	const [tag, setTag] = useState('all');
 	const [filteredImages, setFilteredImages] = useState([]);
 
-	// useEffect(
-	// 	() => {
-	// 		tag === 'all' ? setFilteredImages(images) : setFilteredImages(images.filter(image => image.tag === tag));
-	// 	},
-	// 	[tag]
-	// );
-
 	useEffect(
 		() => {
 			setFilteredImages(images);
@@ -24,17 +17,10 @@ function Gallery() {
 
 	return (
 		<div className="App">
-			{/* <div className='container gallery-container'> */}
 			<div className='container gallery--header'>
 				<h1>Photo Gallery</h1>
 				<h3>Click on one of the images to start lightbox effect</h3>
 			</div>
-			{/* <div className="tags">
-				<TagButton name="all" tagActive={tag === 'all' ? true : false} handleSetTag={setTag} /> /
-				<TagButton name="new" tagActive={tag === 'new' ? true : false} handleSetTag={setTag} /> /
-				<TagButton name="free" tagActive={tag === 'free' ? true : false} handleSetTag={setTag} /> /
-				<TagButton name="pro" tagActive={tag === 'pro' ? true : false} handleSetTag={setTag} />
-			</div> */}
 			<SRLWrapper>
 				<div className="container--gallery">
 					{filteredImages.map(image => (
@@ -49,13 +35,5 @@ function Gallery() {
 		</div>
 	);
 }
-
-const TagButton = ({ name, handleSetTag, tagActive }) => {
-	return (
-		<button className={`tag ${tagActive ? 'active' : null}`} onClick={() => handleSetTag(name)}>
-			{name.toUpperCase()}
-		</button>
-	);
-};
 
 export default Gallery;

@@ -17,12 +17,10 @@ function HeroSection({
                 <h1 className="hero-header">ALMADEN YOUTH MUSICIANS</h1>
                 {cookie.load('name')?<p className="welcome">Welcome {cookie.load('name')}</p>:<p>Share the love through music</p>}
                 <div className="hero-btns">
-                    {/* <Button className="btns" buttonStyle='btn--outline' buttonSize='btn--large' link = '/signin'>SIGN IN <i class="fas fa-sign-in-alt" /></Button> */}
                     <Button className="btns" buttonStyle='btn--outline' buttonSize='btn--large' link = '/gallery'>PHOTO GALLERY <i class="fas fa-images"></i></Button>
                     <Button className="btns" buttonStyle='btn--primary' buttonSize='btn--large' link = '/events'>EVENTS</Button>
                 </div>
             </div>
-            {/* <InfoSection {...homeObjOne}/> */}
         </div>
     )
 }

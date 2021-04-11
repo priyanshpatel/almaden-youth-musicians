@@ -1,11 +1,7 @@
 import React from 'react'
-import { Button } from '../Button'
-// import '../HeroSection.css'
+// import { Button } from '../Button'
 import '../../App.css'
-import { Link } from 'react-router-dom';
-// import InfoSection from '../InfoSection';
-// import {homeObjOne} from './Data';
-// import Events from '../Events';
+// import { Link } from 'react-router-dom';
 import ContactUs from '../ContactUs';
 import Footer from '../Footer';
 

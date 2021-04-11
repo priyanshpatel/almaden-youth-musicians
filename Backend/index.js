@@ -42,8 +42,10 @@ app.use( ( req, res, next ) => {
 });
 
 const contactus = require('./modules/contactus')
+const login = require('./modules/login')
 
 app.use('/contactus', contactus)
+app.use('/login', login)
 
 app.use( express.static( "public" ) );
 
