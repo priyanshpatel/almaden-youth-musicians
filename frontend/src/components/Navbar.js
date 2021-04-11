@@ -136,12 +136,12 @@ function Navbar() {
               >
                 {/* SIGN IN */}
                 {cookie.load('token') ? <GoogleLogout
-                  clientId="120733525518-fk1ski1fl6apfrlmhbh91i5ojdru036v.apps.googleusercontent.com"
+                  clientId="622966484983-250dg58jk8njctet17fnrhc2m0p4vj0l.apps.googleusercontent.com"
                   buttonText="Logout"
                   onLogoutSuccess={onLogout}
                   onFailure={onLoginFailure}
                 /> : <GoogleLogin
-                    clientId="120733525518-fk1ski1fl6apfrlmhbh91i5ojdru036v.apps.googleusercontent.com"
+                    clientId="622966484983-250dg58jk8njctet17fnrhc2m0p4vj0l.apps.googleusercontent.com"
                     buttonText="Login"
                     onSuccess={onLoginSuccess}
                     onFailure={onLoginFailure}
